@@ -59,7 +59,7 @@
 <!-- ************************* Slide ************************************-->
 <slide>
 	<hgroup>
-		<h2>Soil behaviour and why is it so complex?</h2>  
+		<h2>Why soil behaviour is so complex?</h2>
 	</hgroup>
 	<article class="smaller">
 
@@ -83,22 +83,28 @@
 </slide>
 
 <!-- ************************* Slide ************************************-->
-<slide>
+<slide hidden>
 	<hgroup>
-		<h2>Debris Flows and Dry avalanches</h2>  
+		<h2>Debris flows and dry avalanches</h2>
 	</hgroup>
 	<article class="smaller">
-	<div style="float: left; width: 47%;">
-	  <img src="images/Debris.png" width="100%">
-	  <figcaption style="text-align:center;font-size: 60%;"> <br />Debris flow at Colorado (USGS,1997)
-	  </figcaption>
+	  <div style="float: left; width: 47%;">
+  	  <img src="images/Debris.png" width="100%">
+  	  <figcaption style="text-align:center;font-size: 60%;"> <br />Debris flow at Colorado (USGS,1997)
+  	  </figcaption>
   	</div>
   	<div style="float: right; width: 47%;">
-	  <video  width="100%" autoplay loop audio controls muted>
-	  <source src="videos/Debris.webm" type="video/webm">
-	  Your browser does not support the video tag.
-	  </video>
+  	  <video  width="100%" autoplay loop audio controls muted>
+  	  <source src="videos/Debris.webm" type="video/webm">
+  	  Your browser does not support the video tag.
+  	  </video>
   	</div>
+    <div style="float: left">
+      <br />
+      <p> "Granular materials are ubiquitous in nature and are the second-most
+        manipulated material in industry (the first one is water)" </p>
+      <p align="right"> - Patrick Richard (2005) in Nature</p>
+    </div>
     </article>
 </slide>
 
@@ -110,39 +116,32 @@
   </hgroup>
   <article class="smaller">
     <div style="float: left; width: 55%;">
+      	<span style="float: left; width: 100%; text-align: center;">
+          <img src="images/landslide.png" width="80%">
+        </span>
+      <br/>
+     <div style="float: left; width: 100%;">
+      <br/>
       <ul>
-	<li> Sub-marine landslides transport sediment across the
-    	  continental shelf into the deep ocean</li>
-	<li>Landslides occur even in slope planes as low as 1° </li>
-	<li> Reach a speed of up to 50 mph </li>
-	<li>Transports huge volume of sediments (1000km<sup>3</sup>)</li>
+      	<li> Sub-marine landslides transport huge volume of sediments
+          (1000km<sup>3</sup>) across continental shelves</li>
+      	<li>Landslides occur even in slope planes as low as 1° </li>
+      	<li> Reach a speed of up to 50 mph </li>
       </ul>
       Risks:
       <ul>
-	<br />
-	<li> Destruction of infrastructure </li>
-	<li> Generation of tsunamis </li>
+      	<li> Destruction of infrastructure </li>
+      	<li> Generation of tsunamis </li>
       </ul>
     </div>
+    </div>
     <div style="float: right; width: 45%;">
-      <img src="images/landslide.png" width="100%">
+      <img src="images/storegga.jpg" width="90%">
+      <figcaption style="text-align:center;font-size: 60%;"> Storegga landslide
+  	  </figcaption>
     </div>
-    </div>
-    <div style="float: left">
-      <p> "Granular materials are ubiquitous in nature and are the second-most
-        manipulated material in industry (the first one is water)" </p>
-      <p align="right"> - Patrick Richard (2005) in Nature</p>
     </div>
   </article>
-</slide>
-
-<!-- ************************* Slide ************************************-->
-<slide>
-	<hgroup>
-		<h2>Multiscale Modelling</h2>
-	</hgroup>
-	<br />
-	<img src="images/Multiscale.png" width="100%">
 </slide>
 
 <!-- ************************* Slide ************************************-->
@@ -176,20 +175,22 @@
 	</article>
 </slide>
 
+
 <!-- ************************* Slide ************************************-->
 <slide>
   <hgroup>
-    <h2>Granular collapse in fluid</h2>
+    <h2>Collapse down inclined planes: a = 6</h2>
   </hgroup>
   <div class="video">
-    <br />
+    <br/>
     <video  width="100%" controls loop>
-      <source src="videos/LBM_MD_A6.webm" type="video/webm">
+      <source src="videos/LBM_DEM_A6_S5.webm" type="video/webm">
         Your browser does not support the video tag.
     </video>
-    <br />
-    <br />aspect ratio 'a' of 6 <br />
+    <br/>
+    <br/>Collapse of an 'a' = 6 column on a slope of 5 degrees <br />
   </div>
+
 </slide>
 
 
@@ -246,30 +247,23 @@
 <!-- ************************* Slide ************************************-->
 <slide>
   <hgroup>
-    <h2> Lattice Boltzmann - Multiple Relaxation Time </h2>
+    <h2> Lattice Boltzmann - Draft, kiss & tumble </h2>
   </hgroup>
   <article id="MRT" class="smaller">
     <div class="left" style = "width: 70%">
-      <ul>
-	<li> The mesoscopic variables can be obtained as: </li> <br />
-	<div class="block"  style="width:85%">
-	  $\mbox{Density, }\rho=\sum\limits_{i}f_{\textit{i}} \mbox {;
-	  Velocity, } u=\frac{1}{\rho}\sum\limits_{i}\textit{e}_{\textit{i}}f_{\textit{i}}\\
-	  \mbox{Pressure, }\mathbf{p}=C_s^2\rho$
-	</div>
-
-	<li> The kinematic viscosity is: $ \nu=\frac{1}{\sqrt{3}}C_s\Delta x (\tau -0.5) $ </li>
-
-	<li> Smagorinsky model (LES-LBM): the subgrid scales are modeled by an eddy viscosity that is related to the mean rate of strain velocity tensor</li>
-
-	<div class="block" style="width:85%">
-	  $\nu_{s}(x,t)=(C_s \Delta)^2\sqrt{S_{ij}S_{ij}} \mbox{  ;  } S_{ij}=\frac{1}{2}(\frac{\partial u_i}{\partial x_j}+\frac{\partial u_j}{\partial x_i})$
-	</div>
-      </ul>
       <video  id="Karman" width="95%" loop controls>
         <source src="videos/Karman.webm" type="video/webm">
           Your browser does not support the video tag.
       </video>
+      <span style="float: left; width: 100%; text-align: center;"> Kármán vortex street
+      </span>
+      <br /><br/>
+      <figure>
+        <img src="images/LBM-DEM.png" width = "70%">
+        <figcaption style = "font-size: 80%; text-align: center; "><br />LBM-DEM Model
+        </figcaption>
+      </figure>
+
     </div>
     <div class ="right" style = "width=30%">
       <video id="Kissing" width="60%" controls loop>
@@ -312,7 +306,7 @@
 </slide>
 
 <!-- ************************* Slide ************************************-->
-<slide>
+<slide hidden>
   <hgroup>
     <h2>Collapse in fluid: Set-up</h2>
   </hgroup>
@@ -388,6 +382,22 @@
 <!-- ************************* Slide ************************************-->
 <slide>
   <hgroup>
+    <h2>Granular collapse in fluid</h2>
+  </hgroup>
+  <div class="video">
+    <br />
+    <video  width="100%" controls loop>
+      <source src="videos/LBM_MD_A6.webm" type="video/webm">
+        Your browser does not support the video tag.
+    </video>
+    <br />
+    <br />aspect ratio 'a' of 6 <br />
+  </div>
+</slide>
+
+<!-- ************************* Slide ************************************-->
+<slide hidden>
+  <hgroup>
     <h2>Collapse in fluid: Aspect ratio of 8</h2>
   </hgroup>
   <div class="video" style="margin-top: 7%">
@@ -450,17 +460,11 @@
 
 
 <!-- ************************* Slide ************************************-->
-<slide>
+<slide hidden>
   <hgroup>
     <h2>Collapse in fluid: Effect of permeability</h2>
   </hgroup>
   <article id="permeability" class="smaller">
-    Dirichlet boundary conditions constrain the pressure/density at the boundaries (Zou and He, 1997)<br />
-    <br />
-    <div class="block" style="width:60%;">
-      $\rho_0=\sum_{a}f_{a} \mbox{ and } \textbf{u}=\frac{1}{\rho_0}\sum_{a}f_{a}$
-    </div>
-
     <div class="left" style="clear: both; width:40%;">
       <figure style="margin-top:5%">
         <img src="images/Reduction.png" width ="60%">
@@ -511,7 +515,6 @@
     <h2>Collapse in fluid: Effect of permeability</h2>
   </hgroup>
   <article class="smaller">
-    <br /> <br /> <br />
     <div class="left" style="width:48%;">
       <figure>
         <img src="images/r07_PWP_flow_dense.png" width ="100%">
@@ -524,26 +527,13 @@
         <figcaption style = "font-size: 80%; text-align: center; "> <br />Low Permeability r = 0.95R</figcaption>
       </figure>
     </div>
-  </article>
-</slide>
-
-
-
-<!-- ************************* Slide ************************************-->
-<slide>
-  <hgroup>
-    <h2>Collapse in Fluid: Effect of Permeability</h2>
-  </hgroup>
-  <article class="smaller" style="text-align:left;">
     <div class="figure">
       <figure>
-        <img src = "images/effective_stress_a08.png" width="70%">
-        <figcaption style="text-size: 60%"> Effective Stress: High vs Low Permeability</figcaption>
+        <img src = "images/effective_stress_a08.png" width="40%">
       </figure>
     </div>
   </article>
 </slide>
-
 
 <!-- ************************* Slide ************************************-->
 <slide>
@@ -585,7 +575,7 @@
 
 
 <!-- ************************* Slide ************************************-->
-<slide>
+<slide hidden>
   <hgroup>
     <h2>Collapse in fluid: Effect of density</h2>
   </hgroup>
@@ -599,10 +589,8 @@
   </article>
 </slide>
 
-
-
 <!-- ************************* Slide ************************************-->
-<slide>
+<slide hidden>
   <hgroup>
     <h2>Effect of Permeability (Dense / Loose Packing)</h2>
   </hgroup>
@@ -619,23 +607,6 @@
       </figure>
     </div>
   </article>
-</slide>
-
-<!-- ************************* Slide ************************************-->
-<slide>
-  <hgroup>
-    <h2>Collapse down inclined planes: a = 6</h2>
-  </hgroup>
-  <div class="video">
-    <br/>
-    <video  width="100%" controls loop>
-      <source src="videos/LBM_DEM_A6_S5.webm" type="video/webm">
-        Your browser does not support the video tag.
-    </video>
-    <br/>
-    <br/>Collapse of an 'a' = 6 column on a slope of 5 degrees <br />
-  </div>
-
 </slide>
 
 <!-- ************************* Slide ************************************-->
