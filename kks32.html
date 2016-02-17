@@ -1,0 +1,684 @@
+<!--
+    Based on Google IO 2012/2013 HTML5 Slide Template
+
+    Authors: Eric Bidelman <ebidel@gmail.com>
+    Luke Mahé <lukem@google.com>
+    Krishna Kumar <kks32@gmx.com> added MathJax, CSS Edits, and some JS
+    URL: https://code.google.com/p/io-2012-slides
+  -->
+<!DOCTYPE html>
+<html>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+  </script>
+  <script type="text/javascript"
+          src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  <!-- Script for Video play back on Slide for multiple videos-->
+  <script
+     src = "js/video.js">
+  </script>
+
+  <!-- Script for MathJax Reload to avoid race condition in Chrome -->
+  <script
+     src = "js/mathjax_reload.js">
+  </script>
+
+  <head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <!--This one seems to work all the time, but really small on ipad-->
+    <!--<meta name="viewport" content="initial-scale=0.4">-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" media="all" href="theme/css/default.css">
+    <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+    <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+    <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+  </head>
+  <body style="opacity: 0">
+
+
+    <slides class="layout-widescreen">
+
+      <slide class="title-slide segue nobackground">
+        <aside class="gdbar"><img src="images/theme/Engineering.png"></aside>
+        <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+        <hgroup class="auto-fadein">
+          <h1 data-config-title><!-- populated from slide_config.json --></h1>
+          <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
+          <p data-config-presenter><!-- populated from slide_config.json --></p><br /><br />
+          <strong data-config-workshop style="color:grey; text-align:center;"> </strong><!-- popluated from slide_config.json --></h2>
+<br /><br />
+</hgroup>
+<br /><br />
+</slide>
+
+<!-- ************************* Slide ************************************-->
+<slide>
+	<hgroup>
+		<h2>Soil, why are they so complex?</h2>  
+	</hgroup>
+	<article class="smaller">
+
+	<div style="float: left; width: 47%;">
+	  <img src="images/Debris.png" width="100%">
+	  <figcaption style="text-align:center;font-size: 60%;"> <br />Debris flow at Colorado (USGS,1997)
+	  </figcaption>
+  	</div>
+	<div style="float: left; width: 47%;">
+	  <img src="images/Debris.png" width="100%">
+	  <figcaption style="text-align:center;font-size: 60%;"> <br />Debris flow at Colorado (USGS,1997)
+	  </figcaption>
+  	</div>
+  	<div style="float: right; width: 47%;">
+	  <video  width="100%" autoplay loop audio controls muted>
+	  <source src="videos/Debris.webm" type="video/webm">
+	  Your browser does not support the video tag.
+	  </video>
+  	</div>
+    </article>
+</slide>
+
+<!-- ************************* Slide ************************************-->
+<slide>
+	<hgroup>
+		<h2>Debris Flows and Dry avalanches</h2>  
+	</hgroup>
+	<article class="smaller">
+	<div style="float: left; width: 47%;">
+	  <img src="images/Debris.png" width="100%">
+	  <figcaption style="text-align:center;font-size: 60%;"> <br />Debris flow at Colorado (USGS,1997)
+	  </figcaption>
+  	</div>
+  	<div style="float: right; width: 47%;">
+	  <video  width="100%" autoplay loop audio controls muted>
+	  <source src="videos/Debris.webm" type="video/webm">
+	  Your browser does not support the video tag.
+	  </video>
+  	</div>
+    </article>
+</slide>
+
+
+<!-- ************************* Slide ************************************-->
+<slide>
+  <hgroup>
+    <h2>Submarine landslides</h2>
+  </hgroup>
+  <article class="smaller">
+    <div style="float: left; width: 55%;">
+      <ul>
+	<li> Sub-marine landslides transport sediment across the
+    	  continental shelf into the deep ocean</li>
+	<li>Landslides occur even in slope planes as low as 1° </li>
+	<li> Reach a speed of up to 50 mph </li>
+	<li>Transports huge volume of sediments (1000km<sup>3</sup>)</li>
+      </ul>
+      Risks:
+      <ul>
+	<br />
+	<li> Destruction of infrastructure </li>
+	<li> Generation of tsunamis </li>
+      </ul>
+    </div>
+    <div style="float: right; width: 45%;">
+      <img src="images/landslide.png" width="100%">
+    </div>
+    </div>
+    <div style="float: left">
+      <p> "Granular materials are ubiquitous in nature and are the second-most
+        manipulated material in industry (the first one is water)" </p>
+      <p align="right"> - Patrick Richard (2005) in Nature</p>
+    </div>
+  </article>
+</slide>
+
+<!-- ************************* Slide ************************************-->
+<slide>
+	<hgroup>
+		<h2>Multiscale Modelling</h2>
+	</hgroup>
+	<br />
+	<img src="images/Multiscale.png" width="100%">
+</slide>
+
+<!-- ************************* Slide ************************************-->
+<slide>
+	<hgroup>
+		<h2>Discrete Element Approach</h2>
+	</hgroup>
+	<article class="smaller">
+	<div class="left" style="width:50%;">
+	  <video  width="90%" controls loop>
+	    <source src="videos/Tennis_Balls.webm" type="video/webm">
+  	      Your browser does not support the video tag.
+	  </video>
+	</div>
+	<div class="right" style="width:50%;">
+	  <video  width="100%" controls loop>
+	    <source src="videos/Bouncing_Balls.webm" type="video/webm">
+  	      Your browser does not support the video tag.
+	  </video>
+	</div>
+	<br/>
+	<div style="clear:both; text-align: center;">
+	<br/>
+	  Contact force: </li><br />
+	  <div class="block" style="clear: both; width: 100%">
+	    $F_n=\left\{ \begin{matrix} \text{              }0\text{         },\text{ }{{\delta }_{n}}>0  \\
+   -{{k}_{n}}{{\delta }_{n}}-{{\gamma }_{n}}\frac{d{{\delta }_{n}}}{dt},\text{ }{{\delta }_{n}}<0  \\
+\end{matrix} \right.$
+	  </div>
+	</div>
+	</article>
+</slide>
+
+<!-- ************************* Slide ************************************-->
+<slide>
+  <hgroup>
+    <h2>Granular collapse in fluid</h2>
+  </hgroup>
+  <div class="video">
+    <br />
+    <video  width="100%" controls loop>
+      <source src="videos/LBM_MD_A6.webm" type="video/webm">
+        Your browser does not support the video tag.
+    </video>
+    <br />
+    <br />aspect ratio 'a' of 6 <br />
+  </div>
+</slide>
+
+
+<!-- ************************* Slide ************************************-->
+<slide>
+  <hgroup>
+    <h2> Lattice Boltzmann - Multiple Relaxation Time </h2>
+  </hgroup>
+  <br />
+  <div class="left" style = "width: 48%;">
+    <figure>
+      <img src="images/LBMFluid.png" width ="80%">
+      <figcaption style = "font-size: 80%; text-align: center; "> Real Fluid vs LBM Idealisation </figcaption>
+    </figure>
+  </div>
+
+  <div class="right" style = "width: 48%;">
+    <figure>
+      <img src="images/D2Q9.png" width = "80%">
+      <figcaption style = "font-size: 80%; text-align: center; "><br /> LBM D2Q9 Model </figcaption>
+    </figure>
+  </div>
+
+  <article id="LBM" class="smaller">
+    <br />
+    <div class="block" style="clear: both; width: 85%"> <!--border: solid thick grey; border-radius: 1em"-->
+      \[f_{i}(x+dx,t+\Delta t)-f_{i}(x,t)=-S_{\alpha i}(f_{i}(x,t)-f_{i}^{eq}(x,t))\]
+    </div>
+    <ul>
+      <li> $S_{\alpha i}$ is the collisional matrix. </li>
+      <li> Probability density of finding a particle: $f(x,\varepsilon,t)$, where, x is position, $\varepsilon$ is velocity, and t is time.  </li>
+    </ul>
+
+    <div class="left" style = "width: 48%;">
+      <figure>
+	<img src="images/stream.png" width = "80%">
+	<figcaption style = "font-size: 80%; text-align: center; "> Streaming </figcaption>
+      </figure>
+    </div>
+
+    <div class="right" style = "width: 48%;">
+      <figure>
+	<img src="images/collision.png" width ="80%">
+	<figcaption style = "font-size: 80%; text-align: center; "> Collision </figcaption>
+      </figure>
+    </div>
+  </article>
+
+  <!-- Include for Chrome to Re-Jax Slides with equations -->
+  <script defer> reprocessMathJax(document.getElementById('LBM'));</script>
+</slide>
+
+
+<!-- ************************* Slide ************************************-->
+<slide>
+  <hgroup>
+    <h2> Lattice Boltzmann - Multiple Relaxation Time </h2>
+  </hgroup>
+  <article id="MRT" class="smaller">
+    <div class="left" style = "width: 70%">
+      <ul>
+	<li> The mesoscopic variables can be obtained as: </li> <br />
+	<div class="block"  style="width:85%">
+	  $\mbox{Density, }\rho=\sum\limits_{i}f_{\textit{i}} \mbox {;
+	  Velocity, } u=\frac{1}{\rho}\sum\limits_{i}\textit{e}_{\textit{i}}f_{\textit{i}}\\
+	  \mbox{Pressure, }\mathbf{p}=C_s^2\rho$
+	</div>
+
+	<li> The kinematic viscosity is: $ \nu=\frac{1}{\sqrt{3}}C_s\Delta x (\tau -0.5) $ </li>
+
+	<li> Smagorinsky model (LES-LBM): the subgrid scales are modeled by an eddy viscosity that is related to the mean rate of strain velocity tensor</li>
+
+	<div class="block" style="width:85%">
+	  $\nu_{s}(x,t)=(C_s \Delta)^2\sqrt{S_{ij}S_{ij}} \mbox{  ;  } S_{ij}=\frac{1}{2}(\frac{\partial u_i}{\partial x_j}+\frac{\partial u_j}{\partial x_i})$
+	</div>
+      </ul>
+      <video  id="Karman" width="95%" loop controls>
+        <source src="videos/Karman.webm" type="video/webm">
+          Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class ="right" style = "width=30%">
+      <video id="Kissing" width="60%" controls loop>
+        <source src="videos/Kissing.webm" type="video/webm">
+          Your browser does not support the video tag.
+      </video>
+    </div>
+  </article>
+  <!-- Include for Chrome to Re-Jax Slides with equations -->
+  <script defer> reprocessMathJax(document.getElementById('MRT'));</script>
+</slide>
+
+
+
+<!-- ************************* Slide ************************************-->
+<slide>
+  <hgroup>
+    <h2>Modelling of landslides (Locat and Lee, 2002)</h2>
+  </hgroup>
+  <article class="smaller">
+    <div id="Energy" class="left" style="width:50%;">
+      <strong>Energy transfer: </strong><br />
+      <br />	$E_p + E_s = E_k + E_f + E_D + E_v  + E_r $ <br />
+      <br />	$E_p$: Potential, $E_k$: Kinetic, $E_s$: Seismic, <br />
+      <br />	$E_f$: Frictional, $E_D$: Drag, $E_v$: Viscous, <br />
+      <br />	$E_r$: Remoulded, transformation between solid and water <br />
+      <br />	Run-out distance depends on the initial state <br />
+    </div>
+    <div class="right" style="width:50%;">
+      <figure>
+	<img src="images/Locat.png" width="100%">
+	<figcaption style="text-align:center;">
+          Geometric description of mobility
+        </figcaption>
+      </figure>
+    </div>
+    <!-- Include for Chrome to Re-Jax Slides with equations -->
+    <script defer> reprocessMathJax(document.getElementById('Energy'));</script>
+  </article>
+</slide>
+
+<!-- ************************* Slide ************************************-->
+<slide>
+  <hgroup>
+    <h2>Collapse in fluid: Set-up</h2>
+  </hgroup>
+  <article class="smaller" style="text-align:left;">
+    <div class="figure">
+      <br /> <br />
+      <figure>
+        <img src = "images/geometry.png" width="85%">
+        <figcaption style="text-size: 60%"> Collapse in fluid ('a'=0.8)</figcaption>
+      </figure>
+    </div>
+  </article>
+</slide>
+
+
+<!-- ************************* Slide ************************************-->
+<slide>
+  <hgroup>
+    <h2>Granular collapse in fluid: Effect of aspect ratio</h2>
+  </hgroup>
+  <div class="video">
+    <br />
+    <video id="a04" width="80%" >
+      <source src="videos/LBM_MD_a04.webm" type="video/webm">
+        Your browser does not support the video tag.
+    </video>
+    <br />
+    <br />aspect ratio 'a' of 0.4 <br />
+    <br />
+    <video id="a4" width="79%" >
+      <source src="videos/LBM_MD_a4.webm" type="video/webm">
+        Your browser does not support the video tag.
+    </video>
+    <br />aspect ratio 'a' of 4 <br />
+  </div>
+
+  <div class="media-buttons">
+    <input type="button" id="play-button" onclick="PlayVideo('a04');PlayVideo('a4')"; this.disable=true; pause-button.disable=false; value="Play" />
+    <input type="button" id="pause-button" onclick="PauseVideo('a04');PauseVideo('a4')"; this.disable=true; play-button.disable=false; value="Pause" />
+  </div>
+
+</slide>
+
+
+<!-- ************************* Slide ************************************-->
+<slide>
+  <hgroup>
+    <h2>Collapse in fluid: Runout evolution</h2>
+  </hgroup>
+  <article id="time" class="smaller">
+    <div class="left" style="width:50%;">
+      <figure>
+        <img src="images/Runout_a04f.png" width ="100%">
+        <figcaption style = "font-size: 80%; text-align: center; "> <br />Runout 'a' = 0.4</figcaption>
+      </figure>
+    </div>
+    <div class="right" style="width:50%;">
+      <figure>
+        <img src="images/Runout_a4f.png" width ="100%">
+        <figcaption style = "font-size: 80%; text-align: center; "> <br />Runout 'a' = 4</figcaption>
+      </figure>
+    </div>
+    <div style="clear:both; text-align: center">
+      <br />
+      Critical time $\tau_c=\sqrt{H/g}$ (Staron and Hinch, 2005) <br />
+      where, H = Height of the granular pile.
+    </div>
+  </article>
+  <!-- Include for Chrome to Re-Jax Slides with equations -->
+  <script defer> reprocessMathJax(document.getElementById('time'));</script>
+</slide>
+
+<!-- ************************* Slide ************************************-->
+<slide>
+  <hgroup>
+    <h2>Collapse in fluid: Aspect ratio of 8</h2>
+  </hgroup>
+  <div class="video" style="margin-top: 7%">
+    <br />
+    <video width="100%" controls loop>
+      <source src="videos/LBM_MD_A8.webm" type="video/webm">
+        Your browser does not support the video tag.
+    </video>
+    <br />
+    <br />aspect ratio 'a' of 8 <br />
+  </div>
+</slide>
+
+<!-- ************************* Slide ************************************-->
+<slide>
+  <hgroup>
+    <h2>Collapse in fluid: Effect of aspect ratio</h2>
+  </hgroup>
+  <article class="smaller">
+    <div class="left" style="width:50%;">
+      <figure>
+        <img src="images/Runoutf.png" width ="100%">
+        <figcaption style = "font-size: 80%; text-align: center; "> <br />Runout vs aspect ratio</figcaption>
+      </figure>
+    </div>
+    <div class="right" style="width:50%;">
+      <figure>
+        <img src="images/Heightf.png" width ="100%">
+        <figcaption style = "font-size: 80%; text-align: center; "> <br />Height of collapse <br /> vs aspect ratio</figcaption>
+      </figure>
+    </div>
+  </article>
+</slide>
+
+
+<!-- ************************* Slide ************************************-->
+<slide hidden>
+  <hgroup>
+    <h2>Collapse in fluid: Effect of permeability</h2>
+  </hgroup>
+  <div class="video">
+    <br />
+    <video id="r07_r" width="80%" >
+      <source src="videos/LBM_MD_a08_r07.webm" type="video/webm">
+  	Your browser does not support the video tag.
+    </video>
+    <br />Reduction ‘R’=0.7r<br />
+
+    <video id="r095_r" width="79%" >
+      <source src="videos/LBM_MD_a08_r095.webm" type="video/webm">
+  	Your browser does not support the video tag.
+    </video>
+    <br />Reduction ‘R’=0.9r<br />
+  </div>
+  <div class="media-buttons">
+    <input type="button" id="play-button" onclick="PlayVideo('r07_r');PlayVideo('r095_r')"; this.disable=true; pause-button.disable=false; value="Play" />
+    <input type="button" id="pause-button" onclick="PauseVideo('r07_r');PauseVideo('r095_r')"; this.disable=true; play-button.disable=false; value="Pause" />
+  </div>
+</slide>
+
+
+<!-- ************************* Slide ************************************-->
+<slide>
+  <hgroup>
+    <h2>Collapse in fluid: Effect of permeability</h2>
+  </hgroup>
+  <article id="permeability" class="smaller">
+    Dirichlet boundary conditions constrain the pressure/density at the boundaries (Zou and He, 1997)<br />
+    <br />
+    <div class="block" style="width:60%;">
+      $\rho_0=\sum_{a}f_{a} \mbox{ and } \textbf{u}=\frac{1}{\rho_0}\sum_{a}f_{a}$
+    </div>
+
+    <div class="left" style="clear: both; width:40%;">
+      <figure style="margin-top:5%">
+        <img src="images/Reduction.png" width ="60%">
+        <figcaption style = "font-size: 80%; text-align: center; "> <br />Reduction in radius</figcaption>
+      </figure>
+    </div>
+    <div class="right" style="width:50%;">
+      <figure>
+        <img src="images/Carman.png" width ="100%">
+        <figcaption style = "font-size: 80%; text-align: center; "> <br />LBM-DEM Permeability and Theoretical Solutions</figcaption>
+      </figure>
+    </div>
+  </article>
+  <!-- Include for Chrome to Re-Jax Slides with equations -->
+  <script defer> reprocessMathJax(document.getElementById('permeability'));</script>
+</slide>
+
+
+
+<!-- ************************* Slide ************************************-->
+<slide>
+  <hgroup>
+    <h2>Collapse in fluid: Effect of permeability</h2>
+  </hgroup>
+  <div class="video">
+    <br />
+    <video id="r07" width="80%" >
+      <source src="videos/LBM_MD_a08_r07.webm" type="video/webm">
+        Your browser does not support the video tag.
+    </video>
+    <br />Reduction ‘R’=0.7r<br />
+
+    <video id="r095" width="79%" >
+      <source src="videos/LBM_MD_a08_r095.webm" type="video/webm">
+        Your browser does not support the video tag.
+    </video>
+    <br />Reduction ‘R’=0.9r<br />
+  </div>
+  <div class="media-buttons">
+    <input type="button" id="play-button" onclick="PlayVideo('r07');PlayVideo('r095')"; this.disable=true; pause-button.disable=false; value="Play" />
+    <input type="button" id="pause-button" onclick="PauseVideo('r07');PauseVideo('r095')"; this.disable=true; play-button.disable=false; value="Pause" />
+  </div>
+</slide>
+
+<!-- ************************* Slide ************************************-->
+<slide>
+  <hgroup>
+    <h2>Collapse in fluid: Effect of permeability</h2>
+  </hgroup>
+  <article class="smaller">
+    <br /> <br /> <br />
+    <div class="left" style="width:48%;">
+      <figure>
+        <img src="images/r07_PWP_flow_dense.png" width ="100%">
+        <figcaption style = "font-size: 80%; text-align: center; "> <br />High Permeability r = 0.7R</figcaption>
+      </figure>
+    </div>
+    <div class="right" style="width:48%;">
+      <figure>
+        <img src="images/r095_PWP_flow_dense.png" width ="100%">
+        <figcaption style = "font-size: 80%; text-align: center; "> <br />Low Permeability r = 0.95R</figcaption>
+      </figure>
+    </div>
+  </article>
+</slide>
+
+
+
+<!-- ************************* Slide ************************************-->
+<slide>
+  <hgroup>
+    <h2>Collapse in Fluid: Effect of Permeability</h2>
+  </hgroup>
+  <article class="smaller" style="text-align:left;">
+    <div class="figure">
+      <figure>
+        <img src = "images/effective_stress_a08.png" width="70%">
+        <figcaption style="text-size: 60%"> Effective Stress: High vs Low Permeability</figcaption>
+      </figure>
+    </div>
+  </article>
+</slide>
+
+
+<!-- ************************* Slide ************************************-->
+<slide>
+  <hgroup>
+    <h2>Collapse in fluid: Effect of permeability</h2>
+  </hgroup>
+  <article class="smaller" style="text-align:left;">
+    <div class="figure">
+      <figure>
+        <img src = "images/Runout_a08_dense.png" width="70%">
+        <figcaption style="text-size: 60%"> Evolution of Runout for 'a'=0.8 (dense)</figcaption>
+      </figure>
+    </div>
+  </article>
+</slide>
+
+
+
+<!-- ************************* Slide ************************************-->
+<slide>
+  <hgroup>
+    <h2>Collapse in fluid: Effect of permeability</h2>
+  </hgroup>
+  <article class="smaller">
+    <div class="left" style="width:50%;">
+      <figure>
+        <img src="images/runout_fluid_dry.png" width ="100%">
+        <figcaption style = "font-size: 80%; text-align: center; "> <br />Runout vs aspect ratio</figcaption>
+      </figure>
+    </div>
+    <div class="right" style="width:50%;">
+      <figure>
+        <img src="images/runout_fluid_dry_energy.png" width ="100%">
+        <figcaption style = "font-size: 80%; text-align: center; "> <br />Runout vs energy</figcaption>
+      </figure>
+    </div>
+  </article>
+</slide>
+
+
+<!-- ************************* Slide ************************************-->
+<slide>
+  <hgroup>
+    <h2>Collapse in fluid: Effect of density</h2>
+  </hgroup>
+  <article class="smaller" style="text-align:left;">
+    <div class="figure">
+      <figure>
+        <img src = "images/Runout_a08_loose.png" width="70%">
+        <figcaption style="text-size: 60%"> Evolution of Runout for 'a'=0.8 (loose)</figcaption>
+      </figure>
+    </div>
+  </article>
+</slide>
+
+
+
+<!-- ************************* Slide ************************************-->
+<slide>
+  <hgroup>
+    <h2>Effect of Permeability (Dense / Loose Packing)</h2>
+  </hgroup>
+  <article class="smaller">
+    <div class="figure">
+      <figure>
+        <img src = "images/PT_Dense_R095.png" width="65%">
+        <figcaption> <br /> Runout of'a'=0.8 (Dense packing)<br /></figcaption>
+      </figure>
+
+      <figure><br />
+        <img src = "images/PT_Loose_R095.png" width="65%">
+        <figcaption> <br /> Runout of 'a'=0.8 (Loose packing)</figcaption>
+      </figure>
+    </div>
+  </article>
+</slide>
+
+<!-- ************************* Slide ************************************-->
+<slide>
+  <hgroup>
+    <h2>Collapse down inclined planes: a = 6</h2>
+  </hgroup>
+  <div class="video">
+    <br/>
+    <video  width="100%" controls loop>
+      <source src="videos/LBM_DEM_A6_S5.webm" type="video/webm">
+        Your browser does not support the video tag.
+    </video>
+    <br/>
+    <br/>Collapse of an 'a' = 6 column on a slope of 5 degrees <br />
+  </div>
+
+</slide>
+
+<!-- ************************* Slide ************************************-->
+<slide hidden>
+  Hidden slides are left out of the presentation.
+</slide>
+
+<!-- ************************* Slide ************************************-->
+<slide class="thank-you-slide segue nobackground">
+  <aside class="gdbar right"><img src="images/theme/Engineering.png"></aside>
+  <article class="flexbox vleft auto-fadein">
+
+    <h2>Thank You!</h2>
+    <br />
+    <h3>Thanks to Cambridge Commonwealth and Overseas Trust</h3>
+  </article>
+
+  <p class="auto-fadein" data-config-contact>
+    <!-- populated from slide_config.json -->
+  </p>
+  <!-- Very special thanks to Chitra -->
+</slide>
+
+
+<slide class="backdrop"></slide>
+
+</slides>
+
+<script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-XXXXXXXX-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+<!--[if IE]>
+    <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+    <![endif]-->
+</body>
+</html>
