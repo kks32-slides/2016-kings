@@ -30,6 +30,6 @@ var SLIDE_CONFIG = {
         email: 'kks32@cam.ac.uk'
     }, {
         name: 'Prof. Kenichi Soga',
-        company: 'University of Cambridge, UK',
+        company: 'University of California, Berkeley',
     }]
 };
