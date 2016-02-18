@@ -178,6 +178,7 @@
                  -{{k}_{n}}{{\delta }_{n}}-{{\gamma }_{n}}\frac{d{{\delta }_{n}}}{dt},\text{ }{{\delta }_{n}}<0  \\
                  \end{matrix} \right.$
     </div>
+    <br/>
 	  <div class="block" style="clear: both; width: 100%">
       $\ddot{x} = F_n / m_i$
 	  </div>
@@ -210,34 +211,35 @@
     <h2> Lattice Boltzmann - Multiple Relaxation Time </h2>
   </hgroup>
   <br />
-  <div class="left" style = "width: 48%;">
+  <div class="left" style = "width: 40%;">
+    <br/> <br/> <br/>
     <figure>
       <img src="images/LBMFluid.png" width ="80%">
       <figcaption style = "font-size: 80%; text-align: center; "> Real Fluid vs LBM Idealisation </figcaption>
     </figure>
   </div>
 
-  <div class="right" style = "width: 48%;">
+  <div class="right" style = "width: 60%;">
     <figure>
       <img src="images/D2Q9.png" width = "80%">
-      <figcaption style = "font-size: 80%; text-align: center; "><br /> LBM D2Q9 Model </figcaption>
+      <figcaption style = "font-size: 80%; text-align: center; ">LBM D2Q9 Model </figcaption>
     </figure>
   </div>
 
   <article id="LBM" class="smaller">
-    <br />
-    <div class="block" style="clear: both; width: 85%"> <!--border: solid thick grey; border-radius: 1em"-->
+    <!--<br />
+    <div class="block" style="clear: both; width: 85%"> <!--border: solid thick grey; border-radius: 1em"
       \[f_{i}(x+dx,t+\Delta t)-f_{i}(x,t)=-S_{\alpha i}(f_{i}(x,t)-f_{i}^{eq}(x,t))\]
     </div>
     <ul>
       <li> $S_{\alpha i}$ is the collisional matrix. </li>
       <li> Probability density of finding a particle: $f(x,\varepsilon,t)$, where, x is position, $\varepsilon$ is velocity, and t is time.  </li>
-    </ul>
+    </ul>-->
 
-    <div class="left" style = "width: 48%;">
+    <div class="left" style = "clear: both; width: 48%;">
       <figure>
-	<img src="images/stream.png" width = "80%">
-	<figcaption style = "font-size: 80%; text-align: center; "> Streaming </figcaption>
+	       <img src="images/stream.png" width = "80%">
+	       <figcaption style = "font-size: 80%; text-align: center; "> Streaming </figcaption>
       </figure>
     </div>
 
@@ -261,23 +263,15 @@
   </hgroup>
   <article id="MRT" class="smaller">
     <div class="left" style = "width: 70%">
-      <!--<video  id="Karman" width="95%" loop controls>
-        <source src="videos/Karman.webm" type="video/webm">
-          Your browser does not support the video tag.
-      </video>
-      <span style="float: left; width: 100%; text-align: center;"> Kármán vortex street
-      </span>
-      <br /><br/>-->
-      <p>The mesoscopic variables can be obtained as:</p>
-	<div class="block"  style="width:85%">
-	  $\mbox{Density, }\rho=\sum\limits_{i}f_{\textit{i}} \mbox {;
-	  Velocity, } u=\frac{1}{\rho}\sum\limits_{i}\textit{e}_{\textit{i}}f_{\textit{i}}\\
-	  \mbox{Pressure, }\mathbf{p}=C_s^2\rho$
-	</div>
-      <br/><br/>
       <figure>
         <img src="images/LBM-DEM.png" width = "70%">
         <figcaption style = "font-size: 80%; text-align: center; "><br />LBM-DEM Model
+        </figcaption>
+      </figure>
+      <br/><br/>
+      <figure>
+        <img src="images/bouncemod.png" width = "70%">
+        <figcaption style = "font-size: 80%; text-align: center; "><br />Bounceback rule
         </figcaption>
       </figure>
 
