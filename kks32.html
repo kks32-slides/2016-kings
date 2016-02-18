@@ -158,13 +158,13 @@
 	</hgroup>
 	<article class="smaller">
 	<div class="left" style="width:50%;">
-	  <video  width="75%" controls loop>
+	  <video  width="75%" controls loop autoplay>
 	    <source src="videos/Tennis_Balls.webm" type="video/webm">
   	      Your browser does not support the video tag.
 	  </video>
 	</div>
 	<div class="right" style="width:50%;">
-	  <video  width="100%" controls loop>
+    <video  width="100%" controls loop>
 	    <source src="videos/Bouncing_Balls.webm" type="video/webm">
   	      Your browser does not support the video tag.
 	  </video>
@@ -172,11 +172,14 @@
 	<br/>
 	<div style="clear:both; text-align: center;">
 	<br/>
-	  Contact force: </li><br />
+     Contact force: </li><br />
+     <div class="block" style="clear: both; width: 100%">
+              $F_n=\left\{ \begin{matrix} \text{              }0\text{         },\text{ }{{\delta }_{n}}>0  \\
+                 -{{k}_{n}}{{\delta }_{n}}-{{\gamma }_{n}}\frac{d{{\delta }_{n}}}{dt},\text{ }{{\delta }_{n}}<0  \\
+                 \end{matrix} \right.$
+    </div>
 	  <div class="block" style="clear: both; width: 100%">
-	    $F_n=\left\{ \begin{matrix} \text{              }0\text{         },\text{ }{{\delta }_{n}}>0  \\
-   -{{k}_{n}}{{\delta }_{n}}-{{\gamma }_{n}}\frac{d{{\delta }_{n}}}{dt},\text{ }{{\delta }_{n}}<0  \\
-\end{matrix} \right.$
+      $\ddot{x} = F_n / m_i$
 	  </div>
 	</div>
 	</article>
@@ -190,7 +193,7 @@
   </hgroup>
   <div class="video">
     <br/>
-    <video  width="100%" controls loop>
+    <video  width="100%" controls loop autoplay>
       <source src="videos/LBM_DEM_A6_S5.webm" type="video/webm">
         Your browser does not support the video tag.
     </video>
