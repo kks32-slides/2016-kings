@@ -59,26 +59,33 @@
 <!-- ************************* Slide ************************************-->
 <slide>
 	<hgroup>
-		<h2>Why soil behaviour is so complex?</h2>
+		<h2>Why is soil behaviour so complex?</h2>
 	</hgroup>
 	<article class="smaller">
 
 	<span style="float: left; width: 100%; text-align: center;">
-	  <img src="images/kings-college.jpg" width="60%">
-	  <figcaption style="text-align:center;font-size: 60%;"> <br />Supporting King's
+	  <img src="images/kings-college.jpg" width="55%">
+	  <figcaption style="text-align:center;font-size: 60%;">Supporting King's <br/>
 	  </figcaption>
+	<br/>
   	</span>
-	<br/><br/>
-	<span style="float: left; width: 50%; text-align: center;">
-	  <img src="images/sandhand.jpg" width="60%">
+	<div style="float: left; width: 100%;">
+	<span style="float: left; width: 33%; text-align: center;">
+	  <img src="images/sandhand.jpg" width="100%">
 	  <figcaption style="text-align:center;font-size: 60%;"> <br />Soil flow
 	  </figcaption>
   	</span>
-  	<span style="float: left; width: 50%; text-align: center;">
-	 <img src="images/sandcastle.jpg" width="60%">
+	<span style="float: left; width: 33%; text-align: center;">
+	  <img src="images/ottawa-sand.png" width="80%">
+	  <figcaption style="text-align:center;font-size: 60%;"> <br />Sand grains
+	  </figcaption>
+  	</span>
+  	<span style="float: right; width: 33%; text-align: center;">
+	 <img src="images/sandcastle.jpg" width="110%">
 	  <figcaption style="text-align:center;font-size: 60%;"> <br />Sand castle
 	  </figcaption>
   	</span>
+	</div>	
     </article>
 </slide>
 
@@ -151,7 +158,7 @@
 	</hgroup>
 	<article class="smaller">
 	<div class="left" style="width:50%;">
-	  <video  width="90%" controls loop>
+	  <video  width="75%" controls loop>
 	    <source src="videos/Tennis_Balls.webm" type="video/webm">
   	      Your browser does not support the video tag.
 	  </video>
@@ -251,13 +258,20 @@
   </hgroup>
   <article id="MRT" class="smaller">
     <div class="left" style = "width: 70%">
-      <video  id="Karman" width="95%" loop controls>
+      <!--<video  id="Karman" width="95%" loop controls>
         <source src="videos/Karman.webm" type="video/webm">
           Your browser does not support the video tag.
       </video>
       <span style="float: left; width: 100%; text-align: center;"> Kármán vortex street
       </span>
-      <br /><br/>
+      <br /><br/>-->
+      <p>The mesoscopic variables can be obtained as:</p>
+	<div class="block"  style="width:85%">
+	  $\mbox{Density, }\rho=\sum\limits_{i}f_{\textit{i}} \mbox {;
+	  Velocity, } u=\frac{1}{\rho}\sum\limits_{i}\textit{e}_{\textit{i}}f_{\textit{i}}\\
+	  \mbox{Pressure, }\mathbf{p}=C_s^2\rho$
+	</div>
+      <br/><br/>
       <figure>
         <img src="images/LBM-DEM.png" width = "70%">
         <figcaption style = "font-size: 80%; text-align: center; "><br />LBM-DEM Model
@@ -380,7 +394,7 @@
 </slide>
 
 <!-- ************************* Slide ************************************-->
-<slide>
+<slide hidden>
   <hgroup>
     <h2>Granular collapse in fluid</h2>
   </hgroup>
@@ -396,7 +410,7 @@
 </slide>
 
 <!-- ************************* Slide ************************************-->
-<slide hidden>
+<slide >
   <hgroup>
     <h2>Collapse in fluid: Aspect ratio of 8</h2>
   </hgroup>
@@ -417,18 +431,18 @@
     <h2>Collapse in fluid: Effect of aspect ratio</h2>
   </hgroup>
   <article class="smaller">
-    <div class="left" style="width:50%;">
+    <div class="figure" style="width:70%;">
       <figure>
         <img src="images/Runoutf.png" width ="100%">
         <figcaption style = "font-size: 80%; text-align: center; "> <br />Runout vs aspect ratio</figcaption>
       </figure>
     </div>
-    <div class="right" style="width:50%;">
+    <!--<div class="right" style="width:50%;">
       <figure>
         <img src="images/Heightf.png" width ="100%">
         <figcaption style = "font-size: 80%; text-align: center; "> <br />Height of collapse <br /> vs aspect ratio</figcaption>
       </figure>
-    </div>
+    </div>-->
   </article>
 </slide>
 
@@ -558,13 +572,13 @@
     <h2>Collapse in fluid: Effect of permeability</h2>
   </hgroup>
   <article class="smaller">
-    <div class="left" style="width:50%;">
+    <!--<div class="figure" style="width:70%;">
       <figure>
         <img src="images/runout_fluid_dry.png" width ="100%">
         <figcaption style = "font-size: 80%; text-align: center; "> <br />Runout vs aspect ratio</figcaption>
       </figure>
-    </div>
-    <div class="right" style="width:50%;">
+    </div>-->
+    <div class="figure" style="width:70%;">
       <figure>
         <img src="images/runout_fluid_dry_energy.png" width ="100%">
         <figcaption style = "font-size: 80%; text-align: center; "> <br />Runout vs energy</figcaption>
